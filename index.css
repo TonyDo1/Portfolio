@@ -1,12 +1,12 @@
 body, html {
-  background: linear-gradient(135deg, #060412,#040212);
+  background: linear-gradient(135deg, #221a64, #060412);
   margin: 0;
   padding: 0;
   width: 100%;
   line-height: 1.6;
   color: #fff;
+  font-family: "Galdeano", sans-serif;
 }
-
 
 /* Intro Section */
 #intro {
@@ -123,24 +123,41 @@ section p {
 }
 
 /* Projects Section - Individual Project Cards */
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+  
+}
+
 #projects .project {
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1); */
   padding: 1.5rem;
   margin: 1.5rem 0;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.webinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .project img {
-  width: 100%;
+  width: auto;
   max-width: 600px;
   height: auto;
   margin-bottom: 1rem;
   border-radius: 8px;
+  justify-content: center;
 }
 
-#projects .project:hover {
+#projects .webinfo:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
 }
@@ -148,11 +165,11 @@ section p {
 #projects .project h3 {
   font-size: 3rem;
   color: #6ec1e4;
-  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
 }
 
 #projects .project p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #dcdcdc;
 }
 
