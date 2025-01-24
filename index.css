@@ -1,53 +1,228 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+body, html {
+  background: linear-gradient(135deg, #060412,#040212);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  line-height: 1.6;
+  color: #fff;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+
+/* Intro Section */
+#intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  max-width: 80%;
+  padding: 0 2rem;
+  
 }
 
-header nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-section {
-    padding: 2rem;
-    text-align: center;
-}
-
+/* Image Styling */
 #intro img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 480px; 
+  height:600px;
+  border-radius: 20%;
+  margin-right: 70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* Text Styling */
+.intro-text {
+  max-width: 600px;
+  text-align: center;
+  display: inline;
+}
+
+.intro-text h1 {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  color: #6ec1e4;
+}
+
+.intro-text h3 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #1e90ff;
+}
+
+.intro-text p {
+  font-size: 2rem;
+  line-height: 1.8;
+}
+
+.competencies {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #6ec1e4;
+  border-radius: 8px;
+  padding: 1rem;
+  opacity: 0.8;
+  box-shadow: 0 4px 6px rgba(76, 8, 204, 0.2);
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tool img {
+  width: 80px; 
+  height: 80px;
+  margin-bottom: 0.5rem;
+}
+
+.tool p {
+  font-size: 1.5rem;
+  color: #dcdcdc;
+  margin: 0;
+}
+#about p {
+  font-size: 20pt;
+}
+
+.project p {
+  font-size: 20pt;
+}
+
+
+/* About Me and Projects Sections */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #6ec1e4;
+  text-transform: uppercase;
+}
+
+section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #dcdcdc;
+  margin-bottom: 1.5rem;
+}
+
+/* Projects Section - Individual Project Cards */
 #projects .project {
-    margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.project img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+#projects .project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+#projects .project h3 {
+  font-size: 3rem;
+  color: #6ec1e4;
+  margin-bottom: 0.5rem;
+}
+
+#projects .project p {
+  font-size: 1.5rem;
+  color: #dcdcdc;
+}
+
+/* Footer */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+  text-align: center;
+  padding: 2rem 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #dcdcdc;
+  margin-top: 2rem;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+
+
+
+/* 
+Stars effect on the background. Source code taken and modified: https://codepen.io/wheresdara/pen/wvXBpwa 
+Article Tutorial: https://dev.to/0shuvo0/pure-css-infinite-spacegalaxy-with-just-one-div-4o02 
+*/
+.main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  width: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: -42vw -4vh 0px 0px #fff, 25vw -41vh 0px 0px #fff,
+    -20vw 49vh 0px 1px #fff, 5vw 40vh 1px 1px #fff, 29vw 19vh 1px 0px #fff,
+    -44vw -13vh 0px 0px #fff, 46vw 41vh 0px 1px #fff, -3vw -45vh 0px 1px #fff,
+    47vw 35vh 1px 0px #fff, 12vw -8vh 1px 0px #fff, -34vw 48vh 1px 1px #fff,
+    32vw 26vh 1px 1px #fff, 32vw -41vh 1px 1px #fff, 0vw 37vh 1px 1px #fff,
+    34vw -26vh 1px 0px #fff, -14vw -49vh 1px 0px #fff, -12vw 45vh 0px 1px #fff,
+    -44vw -33vh 0px 1px #fff, -13vw 41vh 0px 0px #fff, -36vw -11vh 0px 1px #fff,
+    -23vw -24vh 1px 0px #fff, -38vw -27vh 0px 1px #fff, 16vw -19vh 0px 0px #fff,
+    28vw 33vh 1px 0px #fff, -49vw -4vh 0px 0px #fff, 16vw 32vh 0px 1px #fff,
+    36vw -18vh 1px 0px #fff, -25vw -30vh 1px 0px #fff, -23vw 24vh 0px 1px #fff,
+    -2vw -35vh 1px 1px #fff, -25vw 9vh 0px 0px #fff, -15vw -34vh 0px 0px #fff,
+    -8vw -19vh 1px 0px #fff, -20vw -20vh 1px 1px #fff, 42vw 50vh 0px 1px #fff,
+    -32vw 10vh 1px 0px #fff, -23vw -17vh 0px 0px #fff, 44vw 15vh 1px 0px #fff,
+    -40vw 33vh 1px 1px #fff, -43vw 8vh 0px 0px #fff, -48vw -15vh 1px 1px #fff,
+    -24vw 17vh 0px 0px #fff, -31vw 50vh 1px 0px #fff, 36vw -38vh 0px 1px #fff,
+    -7vw 48vh 0px 0px #fff, 15vw -32vh 0px 0px #fff, 29vw -41vh 0px 0px #fff,
+    2vw 37vh 1px 0px #fff, 7vw -40vh 1px 1px #fff, 15vw 18vh 0px 0px #fff,
+    25vw -13vh 1px 1px #fff, -46vw -12vh 1px 1px #fff, -18vw 22vh 0px 0px #fff,
+    23vw -9vh 1px 0px #fff, 50vw 12vh 0px 1px #fff, 45vw 2vh 0px 0px #fff,
+    14vw -48vh 1px 0px #fff, 23vw 43vh 0px 1px #fff, -40vw 16vh 1px 1px #fff,
+    20vw -31vh 0px 1px #fff, -17vw 44vh 1px 1px #fff, 18vw -45vh 0px 0px #fff,
+    33vw -6vh 0px 0px #fff, 0vw 7vh 0px 1px #fff, -10vw -18vh 0px 1px #fff,
+    -19vw 5vh 1px 0px #fff, 1vw 42vh 0px 0px #fff, 22vw 48vh 0px 1px #fff,
+    39vw -8vh 1px 1px #fff, -6vw -42vh 1px 0px #fff, -47vw 34vh 0px 0px #fff,
+    -46vw 19vh 0px 1px #fff, -12vw -32vh 0px 0px #fff, -45vw -38vh 0px 1px #fff,
+    -28vw 18vh 1px 0px #fff, -38vw -46vh 1px 1px #fff, 49vw -6vh 1px 1px #fff,
+    -28vw 18vh 1px 1px #fff, 10vw -24vh 0px 1px #fff, -5vw -11vh 1px 1px #fff,
+    33vw -8vh 1px 0px #fff, -16vw 17vh 0px 0px #fff, 18vw 27vh 0px 1px #fff,
+    -8vw -10vh 1px 1px #fff;
+  animation: zoom 10s alternate infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(5);
+  }
 }

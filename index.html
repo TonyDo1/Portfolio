@@ -5,47 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tony Do - Portfolio</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    
     <main>
         <section id="intro">
-            <img src="static/picture.png" alt="TonyPicture">
-            <h3>Backend Developer (or whatever archetype i want to master)</h3>
-            <p>My introduction here</p>
-            <p>LinkedIn: </p>
-            <p>Gitlab: </p>
+            <img src="static/TonyPicture.png" alt="Tony Do">
+            <div class="intro-text">
+                <h1>HI, I'm Tony!</h1>
+                <h3>Junior Software Developer</h3>
+                <p>
+                    I AM SO RUSTY AT STYLING STUFF ASDIOASHJDASODHASI
+                </p>
+            </div>
         </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Bunch of hello worlds! Hello world! Hello World! Hello World!</p>
+        <div class="main"></div>
+        <section class="personal_description">
+            <h2>- - -What do I Know?- - -</h2>
+            <p>
+                BLABLABALBALABLABLABALBALBALBALABALBALABALABLBALABLABLAB
+            <p>
+            <section class="competencies">
+                <div class="tool">
+                    <img src="static/Logo_C_sharp.svg.png" alt="C#">
+                    <p>C#</p>
+                </div>
+                <div class="tool">
+                    <img src="static/Mongodb-svgrepo-com.svg.png" alt="MongoDB">
+                    <p>MongoDB</p>
+                </div>
+                <div class="tool">
+                    <img src="static/javascript.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="tool">
+                    <img src="static/Mocha_logo.svg.png" alt="Mocha">
+                    <p>Mocha</p>
+                </div>
+                <div class="tool">
+                    <img src="static/Sinon.png" alt="Sinon">
+                    <p>Sinon</p>
+                </div>
+                <div class="tool">
+                    <img src="static/Python.webp" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="tool">
+                    <img src="static/java.png" alt="Java">
+                    <p>Java</p>
+                </div>
+            </section>
         </section>
+        
 
-        <section id="projects">
+        <section id="projects" data-animate>
             <h2>My Projects</h2>
             <div class="project">
                 <h3>Project 1</h3>
-                <p>Hello World 1</p>
+                <img src="static/520Project.png">
+                <p> 
+                    A fully functional RESTful API built using Node.js and Express. 
+                    Features include sorting/filtering/paginating games, 
+                </p>
             </div>
             <div class="project">
                 <h3>Project 2</h3>
-                <p>Hello World 2</p>
+                <p>
+                    Backend system for an e-commerce platform, built using Django and PostgreSQL. 
+                    It supports dynamic product management, order tracking, and payment integration.
+                </p>
+            </div>
+            <div class="project">
+                <h3>Project 3: Chat Application</h3>
+                <img src="static/chat-app.png">
+                <p>
+                    A real-time chat application using WebSockets. Implemented backend using Express and NodeJs, 
+                    with support for multiple rooms and user authentication.
+                </p>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Tony Do.All rights reserved.</p>
+        <p>&copy; 2025 Tony Do. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
