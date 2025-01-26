@@ -1,11 +1,16 @@
 body, html {
-  background: linear-gradient(135deg, #221a64, #060412);
+  position: relative;
+  background: linear-gradient(180deg, #130f38, #060412);
   margin: 0;
   padding: 0;
   width: 100%;
   line-height: 1.6;
   color: #fff;
   font-family: "Galdeano", sans-serif;
+}
+main {
+  position: relative;
+  z-index: 1;
 }
 
 /* Intro Section */
@@ -124,54 +129,53 @@ section p {
 
 /* Projects Section - Individual Project Cards */
 
-#projects {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: space-between;
-  
-}
-
 #projects .project {
-  /* background: rgba(255, 255, 255, 0.1); */
-  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
   margin: 1.5rem 0;
   border-radius: 8px;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* background-color: rgba(255, 255, 255, 0.1); */
 }
 
-.webinfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+a {
+  color: #6ec1e4; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.project img {
-  width: auto;
-  max-width: 600px;
+a:hover {
+  color: #1e90ff;
+  text-decoration: underline;
+}
+
+#projects .project img {
+  width: 600px;
   height: auto;
-  margin-bottom: 1rem;
+  margin-right: 1.5rem; 
   border-radius: 8px;
-  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-#projects .webinfo:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+#projects .project div {
+  flex: 1;
 }
 
 #projects .project h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #6ec1e4;
-  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 
 #projects .project p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #dcdcdc;
+  line-height: 1.4;
 }
+
 
 /* Footer */
 footer {
@@ -187,18 +191,20 @@ footer p {
   margin: 0;
 }
 
-
-
-
+footer img {
+  width: auto;
+  height: 50px;
+}
 
 /* 
 Stars effect on the background. Source code taken and modified: https://codepen.io/wheresdara/pen/wvXBpwa 
 Article Tutorial: https://dev.to/0shuvo0/pure-css-infinite-spacegalaxy-with-just-one-div-4o02 
 */
 .main {
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   height: 1px;
   width: 1px;
   background-color: #fff;
@@ -232,6 +238,7 @@ Article Tutorial: https://dev.to/0shuvo0/pure-css-infinite-spacegalaxy-with-just
     -28vw 18vh 1px 1px #fff, 10vw -24vh 0px 1px #fff, -5vw -11vh 1px 1px #fff,
     33vw -8vh 1px 0px #fff, -16vw 17vh 0px 0px #fff, 18vw 27vh 0px 1px #fff,
     -8vw -10vh 1px 1px #fff;
+  z-index: -1; /* Send the element behind everything */
   animation: zoom 10s alternate infinite;
 }
 
