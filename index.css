@@ -13,6 +13,9 @@ main {
   z-index: 1;
 }
 
+p {
+  color: #dcdcdc;
+}
 /* Intro Section */
 #intro {
   display: flex;
@@ -78,7 +81,7 @@ main {
 .intro-text h3 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #1e90ff;
+  color: #dcdcdc;
 }
 
 .intro-text p {
@@ -194,17 +197,16 @@ a:hover {
 }
 
 #projects .project h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #6ec1e4;
   margin-bottom: 0.5rem;
 }
 
-#projects .project p {
+#projects .project li {
   font-size: 1.4rem;
   color: #dcdcdc;
   line-height: 1.4;
 }
-
 
 /* Footer */
 footer {
